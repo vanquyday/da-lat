@@ -196,7 +196,7 @@ document.addEventListener("visibilitychange", () => {
 
 /* auto-play: the reel drifts continuously to the end */
 let raf = null, last = 0, pos = 0, vel = 0, speedIdx = 0;
-const SPEEDS = [2, 3, 4];
+const SPEEDS = [2, 3, 4, 8];
 function setPlaying(on){
   $("#play").setAttribute("aria-pressed", on);
   $("#playLbl").textContent = on ? "Tạm dừng" : "Tự chiếu";
