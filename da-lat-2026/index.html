@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Đà Lạt — thước phim 4 ngày</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,600;1,300&display=swap&subset=vietnamese" rel="stylesheet">
+<meta name="description" content="Lịch trình 4 ngày Đà Lạt 07–10/10/2026 của Quý, Lệ, Long, Nhi — kể lại như một thước phim.">
+<meta property="og:title" content="Đà Lạt — thước phim 4 ngày">
+<meta property="og:description" content="Săn mây, đồi chè, phố cũ và những đêm lạnh có lẩu.">
+<meta property="og:image" content="images/d2a-caudat.webp">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎞️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<audio id="music" loop preload="auto"></audio>
+
+<header class="bar">
+  <div class="bar-in">
+    <div class="brand">Đà Lạt</div>
+    <nav class="days" id="days" aria-label="Chọn ngày"></nav>
+    <span class="tc" id="tc">00:00</span>
+    <div class="controls">
+    <button class="play" id="play" aria-pressed="false">
+      <svg viewBox="0 0 14 14" aria-hidden="true"><path id="playIcon" d="M3 1.5v11l9-5.5z" fill="currentColor"/></svg>
+      <span id="playLbl">Tự chiếu</span>
+    </button>
+    <button class="sound" id="sound" aria-pressed="false" aria-label="Bật/tắt nhạc"><span class="eq"><i></i><i></i><i></i></span></button>
+    <button class="speed" id="speed" hidden aria-label="Đổi tốc độ chiếu">1×</button>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-in">
+    <h1>Đà Lạt</h1>
+    <p class="sub">Bốn ngày săn mây, đồi chè, phố cũ và những đêm lạnh có lẩu.</p>
+    <div class="dates">
+      <div><b>07.10</b><span>Khởi chiếu</span></div>
+      <div><b>10.10</b><span>Hạ màn</span></div>
+    </div>
+    <div class="cast" id="cast"></div>
+    <div class="cue">Cuộn xuống để xem phim<i></i></div>
+  </div>
+</section>
+
+<div class="reel-wrap">
+  <div class="reel" id="reel">
+    <div class="holes l"></div><div class="holes r"></div>
+    <div class="troupe" id="troupe" aria-hidden="true"></div>
+    <div id="frames"></div>
+  </div>
+</div>
+
+<section class="end" id="end">
+  <h2>Hết</h2>
+  <p class="lede">Trả xe, đi Sài Gòn. Phần còn lại nằm trong máy ảnh.</p>
+  <div class="credits" id="credits"><ol id="creditList"></ol></div>
+  <button class="again" id="again">Chiếu lại từ đầu</button>
+</section>
+
+
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
