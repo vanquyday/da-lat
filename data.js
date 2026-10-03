@@ -134,4 +134,4 @@ const PHOTO_BG = {
 };
 
 /* Nhạc nền */
-const MUSIC_SRC = "audio/the-nights.mp3";
+const MUSIC_SRC = "audio/nhac-nen.mp3";

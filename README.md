@@ -38,7 +38,7 @@ Mở trực tiếp file `index.html` trên máy cũng chạy được.
 
 **Thêm hoặc sửa điểm đến:** sửa mảng `DAYS` trong `data.js`. Mỗi điểm có `id`, `t` (giờ), `title`, `note`, `km`. Thêm `pass: true` nếu là dòng chuyển cảnh không cần ảnh.
 
-**Đổi nhạc:** thay `audio/the-nights.mp3`, hoặc sửa `MUSIC_SRC` trong `data.js`.
+**Đổi nhạc:** thay `audio/nhac-nen.mp3`, hoặc sửa `MUSIC_SRC` trong `data.js`.
 
 ## Lưu ý
 

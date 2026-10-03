@@ -47,7 +47,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .days a.on{background:var(--ink);color:var(--room);border-color:var(--ink)}
 .play{flex:none;display:flex;align-items:center;gap:8px;background:var(--amber);color:#211915;border:0;border-radius:999px;padding:7px 14px 7px 11px;font-weight:600;font-size:13px}
 .play svg{width:14px;height:14px}
-.speed{flex:none;background:none;border:1px solid var(--line);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.speed{flex:none;background:rgba(240,180,76,.18);border:1px solid var(--amber);border-radius:999px;padding:6px 11px;font-size:13px;font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
 .sound{flex:none;width:34px;height:34px;display:grid;place-items:center;background:none;border:1px solid var(--line);border-radius:50%;color:var(--ink)}
 .sound svg{width:16px;height:16px}
 .sound .eq{display:flex;gap:2px;align-items:flex-end;height:14px}
@@ -71,7 +71,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   .days a small{font-size:11px;margin:0;opacity:.8}
   .days a small::before{content:none}
   /* playback controls float at the bottom, within thumb reach */
-  .controls{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;
+  .controls{position:fixed;left:50%;transform:translateX(-50%);width:max-content;max-width:calc(100vw - 20px);bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:45;
     background:var(--bar);border:1px solid var(--line);border-radius:999px;padding:6px;gap:6px;box-shadow:0 10px 30px -10px rgba(0,0,0,.45)}
   .play{padding:10px 18px 10px 14px;font-size:14px}
   .sound{width:42px;height:42px}
