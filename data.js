@@ -142,7 +142,7 @@ const MUSIC_SRC = "audio/nhac-nen.mp3";
 
 /* Link Web App của Google Apps Script (xem apps-script/HUONG-DAN.md).
    Để trống "" thì trang chạy chế độ thử: dữ liệu chỉ lưu trên máy đang mở. */
-const EXPENSE_API = "";
+const EXPENSE_API = "https://script.google.com/macros/s/AKfycbz4S6ug98J7RB1kM8Q0BRLBgT9CAPgchfTtiW9ORFjrsxaVK6bn7v8_HP4FZQE1PRc9OA/exec";
 
 /* Số tiền mỗi người góp mặc định (khi chưa nhập) */
 const DEFAULT_CONTRIB = 2000000;
