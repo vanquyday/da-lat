@@ -161,6 +161,7 @@ function paintSound(){
   s.setAttribute("aria-pressed", playing);
 }
 function startMusic(){
+  if (document.body.classList.contains("view-cost")) return;
   if (!musicWanted || (musicStarted && !music.paused)) return;
   if (!primed) primeMusic();
   musicStarted = true;
@@ -239,7 +240,7 @@ $("#speed").onclick = () => {
 // the viewer takes over: pause
 ["wheel","touchmove"].forEach(ev => addEventListener(ev, () => { if (raf) stop(); }, {passive:true}));
 addEventListener("keydown", e => {
-  if (e.key === " " && e.target === document.body){ e.preventDefault(); if (raf) stop(); else { startMusic(); play(); } return; }
+  if (e.key === " " && e.target === document.body && !document.body.classList.contains("view-cost")){ e.preventDefault(); if (raf) stop(); else { startMusic(); play(); } return; }
   if (raf && ["ArrowUp","ArrowDown","PageUp","PageDown","Home","End"].includes(e.key)) stop();
 });
 document.addEventListener("click", e => { if (raf && e.target.closest("#days a")) stop(); });

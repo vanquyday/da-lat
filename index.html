@@ -22,6 +22,10 @@
 <header class="bar">
   <div class="bar-in">
     <div class="brand">Đà Lạt</div>
+    <div class="views" role="tablist" aria-label="Chọn phần xem">
+      <button role="tab" data-view="film" aria-selected="true">Lịch trình</button>
+      <button role="tab" data-view="cost" aria-selected="false">Chi phí</button>
+    </div>
     <nav class="days" id="days" aria-label="Chọn ngày"></nav>
     <span class="tc" id="tc">00:00</span>
     <div class="controls">
@@ -64,7 +68,52 @@
 </section>
 
 
+<main class="cost" id="cost" hidden>
+  <div class="cost-in">
+    <header class="cost-head">
+      <div><p class="eyebrow">Quỹ chung · Quý, Lệ, Long, Nhi</p><h2>Chi phí chuyến đi</h2></div>
+      <div class="cost-actions"><span class="sync" id="sync"></span><button class="btn" id="editToggle">Chỉnh sửa</button></div>
+    </header>
+    <p class="notice" id="costNotice" hidden></p>
+    <section class="fund" id="fund" aria-label="Tổng quỹ"></section>
+
+    <h3 class="sec">Mỗi người</h3>
+    <section class="people" id="people"></section>
+
+    <h3 class="sec">Ai chi bao nhiêu, ngày nào</h3>
+    <div class="matrix-wrap"><table class="matrix" id="matrix"></table></div>
+
+    <div class="sec-row"><h3 class="sec">Các khoản chi</h3></div>
+    <div class="filters" id="filters"></div>
+    <section class="ledger" id="ledger"></section>
+
+    <h3 class="sec">Theo hạng mục</h3>
+    <section class="cats" id="cats"></section>
+  </div>
+  <button class="fab" id="addBtn" hidden>+ Thêm khoản chi</button>
+</main>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <div class="sheet-in">
+    <div class="sheet-head"><h3 id="sheetTitle">Thêm khoản chi</h3><button class="x" data-close aria-label="Đóng">×</button></div>
+    <div class="fld"><span class="lbl">Ngày</span><div class="seg wrap" id="fDay"></div></div>
+    <div class="fld"><label class="lbl" for="fTitle">Khoản chi</label><input id="fTitle" placeholder="Ví dụ: Phở sáng" autocomplete="off"><div class="sugs" id="fSugs"></div></div>
+    <div class="fld"><span class="lbl">Hạng mục</span><div class="chips" id="fCat"></div></div>
+    <div class="fld"><label class="lbl" for="fAmount">Số tiền</label>
+      <div class="amtrow"><input id="fAmount" inputmode="decimal" placeholder="60k · 1tr5 · 250000" autocomplete="off">
+        <div class="seg" id="fMode"><button data-mode="each">mỗi người</button><button data-mode="total">tổng</button></div></div>
+    </div>
+    <div class="fld"><span class="lbl">Ai chia khoản này</span><div class="who" id="fWho"></div><p class="hint">Chọn 1 người = chi riêng của người đó.</p></div>
+    <div class="fld"><span class="lbl">Trạng thái</span><div class="seg" id="fStatus"><button data-s="done">Đã chi</button><button data-s="plan">Dự kiến</button></div></div>
+    <div class="fld"><label class="lbl" for="fNote">Ghi chú</label><input id="fNote" placeholder="Không bắt buộc" autocomplete="off"></div>
+    <p class="preview" id="fPreview" aria-live="polite"></p>
+    <div class="sheet-foot"><button class="btn danger" id="fDelete" hidden>Xoá</button><span class="grow"></span><button class="btn ghost" data-close>Huỷ</button><button class="btn primary" id="fSave">Lưu</button></div>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+
 <script src="data.js"></script>
 <script src="script.js"></script>
+<script src="cost.js"></script>
 </body>
 </html>

@@ -135,3 +135,27 @@ const PHOTO_BG = {
 
 /* Nhạc nền */
 const MUSIC_SRC = "audio/nhac-nen.mp3";
+
+/* =========================================================
+   CHI PHÍ
+   ========================================================= */
+
+/* Link Web App của Google Apps Script (xem apps-script/HUONG-DAN.md).
+   Để trống "" thì trang chạy chế độ thử: dữ liệu chỉ lưu trên máy đang mở. */
+const EXPENSE_API = "";
+
+/* Số tiền mỗi người góp mặc định (khi chưa nhập) */
+const DEFAULT_CONTRIB = 2000000;
+
+/* Hạng mục chi tiêu và màu */
+const CATEGORIES = [
+  { id:"an",    name:"Ăn uống",   color:"#E9A93A" },
+  { id:"di",    name:"Di chuyển", color:"#6FA8CF" },
+  { id:"o",     name:"Lưu trú",   color:"#A792DD" },
+  { id:"choi",  name:"Vui chơi",  color:"#6DB58A" },
+  { id:"mua",   name:"Mua sắm",   color:"#E08779" },
+  { id:"khac",  name:"Khác",      color:"#97A6A0" }
+];
+
+/* Gợi ý nhanh cho mục "Trước chuyến đi" */
+const PRE_TRIP_SUGGESTIONS = ["Vé máy bay Hà Nội – Đà Lạt", "Đặt Tân Villa 2", "Thuê xe", "Vé xe đi Sài Gòn"];

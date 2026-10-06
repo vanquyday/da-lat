@@ -8,7 +8,9 @@ Lịch trình chuyến đi Đà Lạt 07–10/10/2026 của Quý, Lệ, Long, Nh
 index.html          Khung trang
 style.css           Giao diện
 script.js           Hiệu ứng: chiếu sáng khung, nhóm di chuyển, tự chiếu, nhạc
-data.js             DỮ LIỆU: lịch trình, ảnh, ava, nhạc — sửa ở đây là chính
+cost.js             Tab Chi phí
+apps-script/        Code Google Apps Script + hướng dẫn kết nối Google Sheet
+data.js             DỮ LIỆU: lịch trình, ảnh, ava, nhạc, cấu hình chi phí — sửa ở đây là chính
 images/             Ảnh từng điểm đến (đặt tên theo id trong data.js)
 images/blur/        Ảnh nền mờ nhỏ phía sau ảnh dọc
 images/avatars/     Ava 4 người
@@ -39,6 +41,14 @@ Mở trực tiếp file `index.html` trên máy cũng chạy được.
 **Thêm hoặc sửa điểm đến:** sửa mảng `DAYS` trong `data.js`. Mỗi điểm có `id`, `t` (giờ), `title`, `note`, `km`. Thêm `pass: true` nếu là dòng chuyển cảnh không cần ảnh.
 
 **Đổi nhạc:** thay `audio/nhac-nen.mp3`, hoặc sửa `MUSIC_SRC` trong `data.js`.
+
+## Tab Chi phí
+
+Tab **Chi phí** cạnh tab Lịch trình cho cả nhóm xem quỹ chung: mỗi người góp bao nhiêu, đã chi gì, dự kiến chi gì, mỗi người còn dư bao nhiêu, ngày nào ai chi bao nhiêu.
+
+- Khoản chi cả nhóm tự chia đều; chọn 1 người là chi riêng của người đó; chọn vài người thì chia đều cho những người đó.
+- Số tiền gõ nhanh được: `60k`, `1tr5`, `250000`, và chọn nhập *mỗi người* hoặc *tổng*.
+- Dữ liệu lưu trong Google Sheet của bạn để cả nhóm cùng thấy: làm theo `apps-script/HUONG-DAN.md`, rồi dán link vào `EXPENSE_API` trong `data.js`. Chưa dán link thì trang chạy chế độ thử, dữ liệu chỉ nằm trên máy đang mở.
 
 ## Lưu ý
 
